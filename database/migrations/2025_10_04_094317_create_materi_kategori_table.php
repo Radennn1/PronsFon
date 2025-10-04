@@ -12,8 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('materi_kategori', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->string('materi_id', 50);
+            $table->string('kategori_id', 50);
+            $table->primary(['materi_id', 'kategori_id']); // Composite primary key
+            $table->foreign('materi_id')->references('materi_id')->on('materi')->onDelete('cascade');
+            $table->foreign('kategori_id')->references('kategori_id')->on('kategori')->onDelete('cascade');
         });
     }
 

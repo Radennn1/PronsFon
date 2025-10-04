@@ -12,8 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('artikel', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->string('artikel_id', 50)->primary();
+            $table->string('judul_artikel', 255)->notNullable();
+            $table->string('penulis', 255)->nullable();
+            $table->string('sumber', 255)->nullable();
+            $table->text('link_atau_file')->notNullable(); // Bisa URL atau path file lokal
         });
     }
 

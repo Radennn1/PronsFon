@@ -12,8 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('ulasan', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->string('ulasan_id', 50)->primary();
+            $table->string('nama_pengirim', 100)->notNullable();
+            $table->string('universitas_pengirim', 255)->nullable();
+            $table->text('isi_ulasan')->notNullable();
+            $table->integer('rating')->notNullable()->check('rating >= 1 AND rating <= 5'); // Menggunakan check constraint
+            $table->timestamp('created_at')->useCurrent();
         });
     }
 

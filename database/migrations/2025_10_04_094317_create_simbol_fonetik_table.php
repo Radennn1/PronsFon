@@ -12,8 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('simbol_fonetik', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->string('simbol_id', 50)->primary();
+            $table->string('simbol_ipa', 10)->notNullable()->unique();
+            $table->text('deskripsi')->nullable();
+            $table->string('file_audio', 255)->nullable();
         });
     }
 

@@ -12,8 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('materi', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->string('materi_id', 50)->primary();
+            $table->string('judul', 255)->notNullable();
+            $table->text('konten')->notNullable();
+            $table->integer('urutan')->nullable();
+            $table->timestamp('last_updated')->useCurrent()->useCurrentOnUpdate(); // MySQL specific
+            // Untuk PostgreSQL atau database lain, mungkin hanya $table->timestamps();
+            // atau $table->dateTime('last_updated')->useCurrent()->nullable();
         });
     }
 

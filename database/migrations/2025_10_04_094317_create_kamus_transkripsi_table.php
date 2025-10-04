@@ -12,8 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('kamus_transkripsi', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->string('kata_id', 50)->primary();
+            $table->string('kata_sumber', 255)->notNullable();
+            $table->string('transkripsi_fonetik', 255)->notNullable();
+            $table->string('bahasa', 50)->notNullable();
         });
     }
 
