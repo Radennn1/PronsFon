@@ -1,0 +1,1 @@
+<img {{ $attributes }} src="{{ asset('images/logo_pronsfon_white.png') }}" alt="Pronsfon Logo">
