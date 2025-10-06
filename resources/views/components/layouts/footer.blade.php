@@ -39,7 +39,7 @@
             <div class="col-span-1 md:col-span-1"> {{-- Disesuaikan untuk menempati 1 kolom di md ke atas --}}
                 <h3 class="text-lg font-semibold mb-4">&nbsp;</h3> {{-- Judul kosong agar sejajar --}}
                 <ul class="space-y-2 text-sm">
-                    <li><a href="{{ url('/artikel') }}" class="hover:underline">Artikel</a></li>
+                    <li><a href="{{ route('artikel.index') }}" class="hover:underline">Artikel</a></li>
                 </ul>
             </div>
 

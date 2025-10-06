@@ -15,8 +15,8 @@ return new class extends Migration
             $table->string('artikel_id', 50)->primary();
             $table->string('judul_artikel', 255)->notNullable();
             $table->string('penulis', 255)->nullable();
-            $table->string('sumber', 255)->nullable();
-            $table->text('link_atau_file')->notNullable(); // Bisa URL atau path file lokal
+            $table->text('deskripsi_abstrak')->nullable(); // <-- PERUBAHAN DI SINI
+            $table->text('link_atau_file')->notNullable();
         });
     }
 

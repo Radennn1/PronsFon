@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\Kategori; // <-- Import model Kategori
 
 return new class extends Migration
 {
@@ -15,10 +16,9 @@ return new class extends Migration
             $table->string('materi_id', 50)->primary();
             $table->string('judul', 255)->notNullable();
             $table->text('konten')->notNullable();
-            $table->integer('urutan')->nullable();
-            $table->timestamp('last_updated')->useCurrent()->useCurrentOnUpdate(); // MySQL specific
-            // Untuk PostgreSQL atau database lain, mungkin hanya $table->timestamps();
-            // atau $table->dateTime('last_updated')->useCurrent()->nullable();
+            $table->integer('urutan')->default(0);
+            $table->foreignIdFor(Kategori::class, 'kategori_id')->constrained('kategori', 'kategori_id')->cascadeOnDelete(); // <-- TAMBAHKAN INI
+            // $table->timestamps(); // Jika Anda tidak menggunakan timestamps di tabel materi
         });
     }
 

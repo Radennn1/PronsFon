@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo; // <-- Import ini
 
 class Materi extends Model
 {
@@ -13,19 +14,21 @@ class Materi extends Model
     protected $primaryKey = 'materi_id';
     protected $keyType = 'string';
     public $incrementing = false;
-    public $timestamps = false; // Karena kita punya 'last_updated' sendiri, tidak pakai 'created_at' dan 'updated_at' default Laravel
+    public $timestamps = false; // Jika Anda tidak menggunakan timestamps
 
     protected $fillable = [
         'materi_id',
         'judul',
         'konten',
         'urutan',
-        'last_updated',
+        'kategori_id', // <-- TAMBAHKAN INI
     ];
 
-    // Hubungan: Satu Materi dapat berada di banyak Kategori
-    public function kategori()
+    /**
+     * Relasi: Materi belongs to Kategori
+     */
+    public function kategori(): BelongsTo // <-- TAMBAHKAN METHOD INI
     {
-        return $this->belongsToMany(Kategori::class, 'materi_kategori', 'materi_id', 'kategori_id');
+        return $this->belongsTo(Kategori::class, 'kategori_id', 'kategori_id');
     }
 }

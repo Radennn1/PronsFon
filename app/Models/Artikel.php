@@ -13,13 +13,13 @@ class Artikel extends Model
     protected $primaryKey = 'artikel_id';
     protected $keyType = 'string';
     public $incrementing = false;
-    public $timestamps = false; // Tidak ada created_at/updated_at di tabel ini
+    public $timestamps = false;
 
     protected $fillable = [
         'artikel_id',
         'judul_artikel',
         'penulis',
-        'sumber',
+        'deskripsi_abstrak', // <-- PERUBAHAN DI SINI
         'link_atau_file',
     ];
 }

@@ -21,6 +21,8 @@ class Kategori extends Model
     // Non-incrementing primary key
     public $incrementing = false;
 
+    public $timestamps = false;
+
     // Kolom yang bisa diisi secara massal
     protected $fillable = [
         'kategori_id',
