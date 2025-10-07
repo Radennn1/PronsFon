@@ -10,10 +10,11 @@ use Illuminate\Support\Str;
 
 class MateriController extends Controller
 {
-    // ... (metode create tetap sama, tidak perlu lagi mengambil kategori) ...
     public function create()
     {
-        return view('admin.materi.create');
+        // Ambil semua kategori yang sudah ada untuk ditampilkan di dropdown
+        $kategoris = Kategori::orderBy('nama_kategori')->get();
+        return view('admin.materi.create', compact('kategoris'));
     }
 
     public function store(Request $request)
@@ -22,22 +23,35 @@ class MateriController extends Controller
             'judul' => 'required|string|max:255',
             'konten' => 'required|string',
             'urutan' => 'required|integer',
-            'nama_kategori' => 'required|string|max:100', // <-- Nama field di form
+            'kategori_id' => 'required|array', // Diubah menjadi array
+            'kategori_id.*' => 'string|max:100', // Validasi setiap item di array
         ]);
 
-        // Logika untuk mencari atau membuat kategori baru
-        $kategori = Kategori::firstOrCreate(
-            ['nama_kategori' => $validated['nama_kategori']], // Kriteria pencarian
-            ['kategori_id' => (string) Str::uuid()]            // Data jika harus membuat baru
-        );
-
-        Materi::create([
+        // Buat Materi terlebih dahulu
+        $materi = Materi::create([
             'materi_id' => (string) Str::uuid(),
             'judul' => $validated['judul'],
             'konten' => $validated['konten'],
             'urutan' => $validated['urutan'],
-            'kategori_id' => $kategori->kategori_id, // Gunakan ID dari kategori yang ditemukan/dibuat
         ]);
+
+        $kategoriIds = [];
+        foreach ($validated['kategori_id'] as $kategoriInput) {
+            // Coba cari kategori berdasarkan ID (jika pengguna memilih yang sudah ada)
+            $kategori = Kategori::find($kategoriInput);
+            
+            // Jika tidak ditemukan, berarti ini nama baru, maka buat kategori baru
+            if (!$kategori) {
+                $kategori = Kategori::firstOrCreate(
+                    ['nama_kategori' => $kategoriInput],
+                    ['kategori_id' => (string) Str::uuid()]
+                );
+            }
+            $kategoriIds[] = $kategori->kategori_id;
+        }
+
+        // Lampirkan (attach) semua kategori yang dipilih/dibuat ke materi
+        $materi->kategori()->attach($kategoriIds);
 
         return redirect()->route('admin.materi.create')->with('success', 'Materi berhasil ditambahkan!');
     }

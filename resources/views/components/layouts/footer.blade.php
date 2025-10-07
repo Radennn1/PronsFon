@@ -21,8 +21,8 @@
             <div class="col-span-1 md:col-span-1"> {{-- Disesuaikan untuk menempati 1 kolom di md ke atas --}}
                 <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="{{ url('/materi') }}" class="hover:underline">Materi</a></li>
-                    <li><a href="{{ url('/simbol-fonetik') }}" class="hover:underline">Pengucapan Simbol Fonetis</a></li>
+                    <li><a href="{{ route('materi.index') }}" class="hover:underline">Materi</a></li>
+                    <li><a href="{{ route('simbol.index') }}" class="hover:underline">Pengucapan Simbol Fonetis</a></li>
                 </ul>
             </div>
 
@@ -30,8 +30,8 @@
             <div class="col-span-1 md:col-span-1"> {{-- Disesuaikan untuk menempati 1 kolom di md ke atas --}}
                 <h3 class="text-lg font-semibold mb-4">&nbsp;</h3> {{-- Judul kosong agar sejajar --}}
                 <ul class="space-y-2 text-sm">
-                    <li><a href="{{ url('/kamus-transkripsi') }}" class="hover:underline">Transkrip</a></li>
-                    <li><a href="{{ url('/penunjuk-fonetis') }}" class="hover:underline">Penunjuk Fonetis</a></li>
+                    <li><a href="{{ route('kamus.index') }}" class="hover:underline">Transkrip</a></li>
+                    <li><a href="{{ route('tugas.index') }}" class="hover:underline">Penunjuk Fonetis</a></li>
                 </ul>
             </div>
 

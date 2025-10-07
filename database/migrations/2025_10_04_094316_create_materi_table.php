@@ -17,7 +17,6 @@ return new class extends Migration
             $table->string('judul', 255)->notNullable();
             $table->text('konten')->notNullable();
             $table->integer('urutan')->default(0);
-            $table->foreignIdFor(Kategori::class, 'kategori_id')->constrained('kategori', 'kategori_id')->cascadeOnDelete(); // <-- TAMBAHKAN INI
             // $table->timestamps(); // Jika Anda tidak menggunakan timestamps di tabel materi
         });
     }

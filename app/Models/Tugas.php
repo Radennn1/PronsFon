@@ -15,10 +15,11 @@ class Tugas extends Model
     public $incrementing = false;
     public $timestamps = false; // Karena kita hanya punya 'created_at' dan tidak 'updated_at'
 
-    protected $fillable = [
+     protected $fillable = [
         'tugas_id',
         'judul_tugas',
         'deskripsi',
+        'tujuan_capaian', // <-- TAMBAHKAN INI
         'kategori_tugas_id',
         'created_at',
     ];
@@ -27,5 +28,13 @@ class Tugas extends Model
     public function kategori()
     {
         return $this->belongsTo(Kategori::class, 'kategori_tugas_id', 'kategori_id');
+    }
+
+    /**
+     * Memberitahu Laravel untuk menggunakan 'tugas_id' untuk route model binding.
+     */
+    public function getRouteKeyName() // <-- TAMBAHKAN METODE INI
+    {
+        return 'tugas_id';
     }
 }

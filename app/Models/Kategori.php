@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany; // <-- Import ini
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Kategori extends Model
 {
@@ -30,14 +32,13 @@ class Kategori extends Model
         'deskripsi_kategori',
     ];
 
-    // Hubungan: Satu Kategori memiliki banyak Materi
-    public function materi()
+    public function materi(): BelongsToMany // <-- TAMBAHKAN METODE INI
     {
         return $this->belongsToMany(Materi::class, 'materi_kategori', 'kategori_id', 'materi_id');
     }
 
     // Hubungan: Satu Kategori dapat memiliki banyak Tugas
-    public function tugas()
+    public function tugas(): HasMany
     {
         return $this->hasMany(Tugas::class, 'kategori_tugas_id', 'kategori_id');
     }

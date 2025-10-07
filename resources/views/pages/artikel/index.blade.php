@@ -1,7 +1,7 @@
 <x-layouts.guest>
     <main>
         {{-- Header Halaman --}}
-        <section class="relative bg-gradient-to-r from-orange-500 to-red-500 min-h-[500px] flex items-center justify-center pt-20">
+        <section class="relative bg-gradient-to-r from-orange-500 to-red-500 min-h-[500px] flex items-center justify-center">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
                 <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight mb-4">
                     Kumpulan Artikel Penelitian
@@ -13,7 +13,7 @@
         </section>
 
         {{-- Daftar Konten Artikel --}}
-        <section class="bg-white pb-12">
+        <section class="bg-white py-12">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 {{-- Container untuk daftar artikel, dengan garis pemisah antar item --}}
                 <div class="space-y-10 divide-y divide-gray-200">
