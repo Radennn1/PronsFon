@@ -10,7 +10,7 @@
             </div>
         @endif
 
-        <form action="{{ route('admin.materi.store') }}" method="POST">
+        <form action="{{ route('admin.materi.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             
             {{-- Judul, Urutan --}}
@@ -39,10 +39,20 @@
                 @enderror
             </div>
 
-            {{-- Konten --}}
             <div class="mb-4">
-                <label for="konten" class="block text-gray-700 font-bold mb-2">Konten:</label>
-                <textarea name="konten" id="konten" rows="10" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">{{ old('konten') }}</textarea>
+                <label for="konten" class="block text-gray-700 font-bold mb-2">Konten (Teks):</label>
+                <textarea name="konten" id="konten" rows="10" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline @error('konten') border-red-500 @enderror">{{ old('konten') }}</textarea>
+                @error('konten')
+                    <p class="text-red-500 text-xs italic mt-2">{{ $message }}</p>
+                @enderror
+            </div>
+
+            <div class="mb-4">
+                <label for="file_pdf" class="block text-gray-700 font-bold mb-2">Upload PDF (Opsional):</label>
+                <input type="file" name="file_pdf" id="file_pdf" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline @error('file_pdf') border-red-500 @enderror">
+                @error('file_pdf')
+                    <p class="text-red-500 text-xs italic mt-2">{{ $message }}</p>
+                @enderror
             </div>
             
             <button type="submit" class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">

@@ -19,6 +19,7 @@ class Tugas extends Model
         'tugas_id',
         'judul_tugas',
         'deskripsi',
+        'soal',
         'tujuan_capaian', // <-- TAMBAHKAN INI
         'kategori_tugas_id',
         'created_at',

@@ -24,8 +24,12 @@ class TugasPageController extends Controller
         // Ambil kategori dari tugas yang sedang ditampilkan
         $kategori = $tugas->kategori;
 
+        $materiRelevan = collect();
+
         // Ambil semua materi yang berada dalam kategori yang sama
-        $materiRelevan = $kategori->materi;
+        if ($kategori) {
+            $materiRelevan = $kategori->materi;
+        }
 
         return view('pages.tugas.show', [
             'tugas' => $tugas,

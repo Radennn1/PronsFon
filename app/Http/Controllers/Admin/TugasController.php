@@ -22,8 +22,9 @@ class TugasController extends Controller
         $validated = $request->validate([
             'judul_tugas' => 'required|string|max:255',
             'deskripsi' => 'required|string',
+            'soal' => 'required|string',
             'tujuan_capaian' => 'nullable|string',
-            'kategori_tugas_id' => 'required|string|exists:kategori,kategori_id',
+            'kategori_tugas_id' => 'nullable|string|exists:kategori,kategori_id',
         ]);
 
         $validated['tugas_id'] = (string) Str::uuid();

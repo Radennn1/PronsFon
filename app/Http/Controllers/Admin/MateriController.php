@@ -25,7 +25,15 @@ class MateriController extends Controller
             'urutan' => 'required|integer',
             'kategori_id' => 'required|array', // Diubah menjadi array
             'kategori_id.*' => 'string|max:100', // Validasi setiap item di array
+            'file_pdf' => 'nullable|file|mimes:pdf|max:51200',
         ]);
+
+        $pdfPath = null;
+        // Cek jika ada file PDF yang di-upload
+        if ($request->hasFile('file_pdf')) {
+            // Simpan file di storage/app/public/materi-pdf
+            $pdfPath = $request->file('file_pdf')->store('materi-pdf', 'public');
+        }
 
         // Buat Materi terlebih dahulu
         $materi = Materi::create([
@@ -33,6 +41,7 @@ class MateriController extends Controller
             'judul' => $validated['judul'],
             'konten' => $validated['konten'],
             'urutan' => $validated['urutan'],
+            'file_pdf' => $pdfPath,
         ]);
 
         $kategoriIds = [];

@@ -17,8 +17,8 @@ class Materi extends Model
         'materi_id',
         'judul',
         'konten',
+        'file_pdf',
         'urutan',
-        // 'kategori_id' DIHAPUS DARI SINI
     ];
 
     public function kategori(): BelongsToMany

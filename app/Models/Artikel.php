@@ -20,6 +20,6 @@ class Artikel extends Model
         'judul_artikel',
         'penulis',
         'deskripsi_abstrak', // <-- PERUBAHAN DI SINI
-        'link_atau_file',
+        'file_pdf', // <-- PERUBAHAN DI SINI
     ];
 }

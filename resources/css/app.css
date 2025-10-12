@@ -1,1 +1,45 @@
 @import "tailwindcss";
+
+/* Swiper custom warna tombol */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #F97316 !important; /* oranye-500 */
+    transition: color 0.3s ease;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    color: #EA580C !important; /* oranye-600 */
+    transform: scale(1.05);
+}
+
+/* Pagination titik */
+.swiper-pagination-bullet {
+    background-color: #F97316 !important;
+    opacity: 0.5;
+}
+.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: stretch; /* semua slide punya tinggi sama */
+}
+
+.swiper-slide {
+  display: flex;
+  height: auto !important;
+}
+
+.swiper-slide > div {
+  height: 100%;
+}
+
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

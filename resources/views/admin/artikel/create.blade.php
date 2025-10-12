@@ -10,7 +10,7 @@
             </div>
         @endif
 
-        <form action="{{ route('admin.artikel.store') }}" method="POST">
+        <form action="{{ route('admin.artikel.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
             <div class="mb-4">
@@ -30,10 +30,11 @@
                 <label for="deskripsi_abstrak" class="block text-gray-700 font-bold mb-2">Deskripsi/Abstrak (Opsional):</label>
                 <textarea name="deskripsi_abstrak" id="deskripsi_abstrak" rows="4" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">{{ old('deskripsi_abstrak') }}</textarea>
             </div>
+
             <div class="mb-4">
-                <label for="link_atau_file" class="block text-gray-700 font-bold mb-2">Link atau Path File:</label>
-                <input type="text" name="link_atau_file" id="link_atau_file" value="{{ old('link_atau_file') }}" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline @error('link_atau_file') border-red-500 @enderror">
-                 @error('link_atau_file')
+                <label for="file_pdf" class="block text-gray-700 font-bold mb-2">Upload File PDF:</label>
+                <input type="file" name="file_pdf" id="file_pdf" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline @error('file_pdf') border-red-500 @enderror" required>
+                @error('file_pdf')
                     <p class="text-red-500 text-xs italic mt-2">{{ $message }}</p>
                 @enderror
             </div>

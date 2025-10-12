@@ -25,14 +25,21 @@ class ArtikelController extends Controller
             'judul_artikel' => 'required|string|max:255',
             'penulis' => 'nullable|string|max:255',
             'deskripsi_abstrak' => 'nullable|string', // <-- PERUBAHAN DI SINI
-            'link_atau_file' => 'required|string',
+            'file_pdf' => 'required|file|mimes:pdf|max:51200',
         ]);
 
+        $pdfPath = $request->file('file_pdf')->store('artikel-pdf', 'public');
         // 2. Tambahkan ID unik
         $validated['artikel_id'] = (string) Str::uuid();
 
         // 3. Simpan data
-        Artikel::create($validated);
+        Artikel::create([
+            'artikel_id' => (string) Str::uuid(),
+            'judul_artikel' => $validated['judul_artikel'],
+            'penulis' => $validated['penulis'],
+            'deskripsi_abstrak' => $validated['deskripsi_abstrak'],
+            'file_pdf' => $pdfPath, // Simpan path PDF
+        ]);
 
         // 4. Kembali dengan pesan sukses
         return redirect()->route('admin.artikel.create')->with('success', 'Artikel berhasil ditambahkan!');

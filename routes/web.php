@@ -7,15 +7,14 @@ use App\Http\Controllers\Admin\MateriController;
 use App\Http\Controllers\Admin\SimbolController;
 use App\Http\Controllers\Admin\TugasController;
 use App\Http\Controllers\ArtikelPageController;
+use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\KamusPageController;
 use App\Http\Controllers\MateriPageController;
 use App\Http\Controllers\SimbolFonetikPageController;
 use App\Http\Controllers\TugasPageController;
+use App\Http\Controllers\UlasanController;
 
-Route::get('/', function () {
-    return view('home');
-});
-
+Route::get('/', [HomePageController::class, 'index'])->name('home');
 // ================== ROUTE ADMIN (RadenOnly) ==================
 Route::prefix('RadenOnly')->name('admin.')->group(function () {
 
@@ -51,6 +50,8 @@ Route::get('/tugas/{tugas}', [TugasPageController::class, 'show'])->name('tugas.
 Route::get('/kamus-transkripsi', [KamusPageController::class, 'index'])->name('kamus.index');
 
 Route::get('/simbol-fonetik', [SimbolFonetikPageController::class, 'index'])->name('simbol.index');
+
+Route::post('/ulasan', [UlasanController::class, 'store'])->name('ulasan.store');
 
 // ================== ROUTE AUDIO PLAYER (FIX .WAV DOWNLOAD) ==================
 Route::get('/audio/{filename}', function ($filename) {

@@ -15,7 +15,7 @@ return new class extends Migration
         Schema::create('materi', function (Blueprint $table) {
             $table->string('materi_id', 50)->primary();
             $table->string('judul', 255)->notNullable();
-            $table->text('konten')->notNullable();
+            $table->string('file_pdf')->nullable();
             $table->integer('urutan')->default(0);
             // $table->timestamps(); // Jika Anda tidak menggunakan timestamps di tabel materi
         });
