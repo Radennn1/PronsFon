@@ -10,6 +10,7 @@ use App\Http\Controllers\ArtikelPageController;
 use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\KamusPageController;
 use App\Http\Controllers\MateriPageController;
+use App\Http\Controllers\PageController;
 use App\Http\Controllers\SimbolFonetikPageController;
 use App\Http\Controllers\TugasPageController;
 use App\Http\Controllers\UlasanController;
@@ -52,6 +53,8 @@ Route::get('/kamus-transkripsi', [KamusPageController::class, 'index'])->name('k
 Route::get('/simbol-fonetik', [SimbolFonetikPageController::class, 'index'])->name('simbol.index');
 
 Route::post('/ulasan', [UlasanController::class, 'store'])->name('ulasan.store');
+
+Route::get('/kebijakan-privasi', [PageController::class, 'privacy'])->name('privacy.policy');
 
 // ================== ROUTE AUDIO PLAYER (FIX .WAV DOWNLOAD) ==================
 Route::get('/audio/{filename}', function ($filename) {

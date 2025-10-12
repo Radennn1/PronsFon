@@ -43,3 +43,18 @@
   justify-content: center;
   align-items: center;
 }
+
+.swiper-ulasan {
+  padding: 2rem 0;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.swiper-button-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
