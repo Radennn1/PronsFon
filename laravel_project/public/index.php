@@ -5,15 +5,15 @@ use Illuminate\Http\Request;
 define('LARAVEL_START', microtime(true));
 
 // Maintenance mode check
-if (file_exists($maintenance = __DIR__ . '/../laravel_project/storage/framework/maintenance.php')) {
+if (file_exists($maintenance = __DIR__ . '/../storage/framework/maintenance.php')) {
     require $maintenance;
 }
 
 // Composer autoloader
-require __DIR__ . '/../laravel_project/vendor/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 
 // Bootstrap Laravel
-$app = require_once __DIR__ . '/../laravel_project/bootstrap/app.php';
+$app = require_once __DIR__ . '/../bootstrap/app.php';
 
 // Override public path agar Laravel tahu folder public adalah public_html
 $app->usePublicPath(__DIR__);

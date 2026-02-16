@@ -16,6 +16,7 @@
                 {{-- Judul dan Deskripsi --}}
                 <div class="prose max-w-none">
                     <h2 class="text-3xl font-bold text-gray-900 not-prose">{{ $tugas->judul_tugas }}</h2>
+                    <br>
                     @if($tugas->deskripsi)
                         <p class="lead">{{ $tugas->deskripsi }}</p>
                     @endif

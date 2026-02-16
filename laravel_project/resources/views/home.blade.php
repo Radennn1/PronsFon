@@ -30,8 +30,11 @@
                     </h2>
                 </div>
                 <div class="prose max-w-none text-gray-600 text-center">
-                    <p>Fonetik sebagai ilmu bahasa memiliki sejarah panjang yang berawal dari kajian bunyi dalam bahasa Sanskerta oleh Panini pada abad ke-5 SM. Panini, seorang ahli tata bahasa India kuno, telah merumuskan deskripsi sistematis mengenai bunyi ujaran melalui karya monumentalnya Ashtadhyayi. Pada masa Yunani Kuno, tokoh seperti Aristoteles dan Democritus turut mempelajari bunyi sebagai bagian dari filsafat bahasa.</p>
-                    <p>Perkembangan signifikan terjadi pada abad ke-19, dan pada tahun 1886, berdirinya International Phonetic Association (IPA) di Paris menjadi tonggak penting. Lembaga ini menciptakan International Phonetic Alphabet, sistem simbol bunyi internasional yang masih digunakan hingga saat ini. Pada abad ke-20, fonetik berkembang lebih jauh dengan bantuan teknologi seperti spektrograf, dan kini dipandang sebagai disiplin ilmiah yang menjembatani linguistik, fisiologi, akustik, dan psikologi untuk memahami bagaimana manusia menghasilkan dan memahami bunyi bahasa.</p>
+                    <p>Fonetik sebagai ilmu bahasa memiliki sejarah panjang yang berawal dari kajian bunyi dalam bahasa Sanskerta oleh Panini pada abad ke-5 SM. Panini, seorang ahli tata bahasa India kuno, telah merumuskan deskripsi sistematis mengenai bunyi ujaran melalui karya monumentalnya Ashtadhyayi, yang dianggap sebagai analisis fonetik tertua di dunia (Ladefoged & Johnson, 2015). Pada masa Yunani Kuno, tokoh seperti Aristoteles dan Democritus turut mempelajari bunyi sebagai bagian dari filsafat bahasa dan komunikasi manusia. Pemikiran mereka menjadi dasar bagi analisis artikulasi dan akustik dalam linguistik modern (Ashby, 2011).</p>
+                    <br>
+                    <p>Perkembangan signifikan fonetik terjadi pada abad ke-19 ketika Henry Sweet (1877) dan para linguis Eropa mulai menekankan pentingnya studi empiris terhadap bunyi bahasa. Tahun 1886, berdirinya International Phonetic Association (IPA) di Paris menjadi tonggak penting dalam sejarah fonetik. Lembaga ini menciptakan International Phonetic Alphabet, yaitu sistem simbol bunyi internasional yang masih digunakan hingga saat ini untuk menggambarkan setiap bunyi ujaran secara universal (International Phonetic Association, 1999).</p>
+                    <br>
+                    <p>Pada abad ke-20, fonetik berkembang lebih jauh dengan bantuan teknologi seperti spektrograf dan perangkat analisis akustik. Pendekatan fonetik modern tidak hanya mencakup deskripsi bunyi secara artikulatoris, tetapi juga mencakup analisis akustik dan persepsi bunyi oleh pendengar. Seperti dijelaskan oleh Roach (2009), fonetik kini dipandang sebagai disiplin ilmiah yang menjembatani linguistik, fisiologi, akustik, dan psikologi, sehingga memberikan pemahaman komprehensif mengenai bagaimana manusia menghasilkan dan memahami bunyi bahasa.</p>
                 </div>
             </div>
         </section>
@@ -50,18 +53,21 @@
                     </h2>
                 </div>
                 <div class="prose max-w-none text-gray-600 space-y-8">
-                    <p>Kajian fonetik berfokus pada analisis bunyi-bunyi bahasa tanpa mempertimbangkan hubungan dengan makna kata. Ilmu bunyi (fonetik) dibagi ke dalam tiga fokus pembahasan utama:</p>
+                    <p>Kajian fonetik berfokus pada analisis bunyi-bunyi bahasa tanpa mempertimbangkan hubungan dengan makna kata, sedangkan kajian fonemik meneliti fungsi masing masing bunyi sebagai pembeda makna kata (Chaer, 2014).</p>
+                    <p>Fonetik memberikan fokus pada ujaran yang belum terpola, belum terstruktur, atau yang dalam istilah Ferdinand de Saussure, Bapak Linguistik dari Swiss sebagai 'parole' yaitu bersifat uiar (Setyaningsih & Rahardi, 2014). Ilmu bunyi (fonetik) dibagi ke dalam tiga fokus pembahasan, yakni (1) articulatory phonetics, (2) acoustic phonetics, dan (3) fonetik auditoris (Becker, 2006). </p>
                     <div>
                         <h3 class="font-bold text-xl text-gray-800">1. Fonetik Artikulatoris (Articulatory Phonetics)</h3>
-                        <p>Mempelajari bagaimana bunyi dihasilkan oleh alat ucap manusia. Alat ucap ini dibagi menjadi artikulator aktif (yang dapat digerakkan seperti bibir dan lidah) dan pasif (yang tidak dapat digerakkan seperti gigi dan langit-langit).</p>
+                        <p>Bunyi-bunyi bahasa yang dihasilkan oleh alat-alat ucap tersebut namanya selalu disebutkan sesuai dengan alat-alat ucap yang menghasilkannya. Ada dua macam alat ucap atau artikulatoris, yaitu artikulatoris aktif dan artikulatoris pasif. Artikulatoris aktif ialah artikulator yang dapat digerakkan, misalnya bibir, lidah, pangkal tenggorok, dan anak tekak. Sedangkan artikulatoris pasif ialah artikulator yang tidak dapat digerakkan, misalnya gigi, dan langit-langit (Akhyaruddin et al., 2020).</p>
+                        <br>
+                        <p>Terdapat contoh konkret dari fonetik artikulatoris adalah perbedaan antara bunyi [p] dan [b]. Kedua bunyi ini dihasilkan di titik artikulasi yang sama, yaitu bilabial namun perbedaan utama terletak pada penggunaan pita suara. Bunyi [b] adalah bunyi bersuara, sedangkan [p] adalah bunyi tak bersuara.</p>
                     </div>
                     <div>
                         <h3 class="font-bold text-xl text-gray-800">2. Fonetik Akustik (Acoustic Phonetics)</h3>
-                        <p>Mempelajari aspek fisik bunyi bahasa sebagai gelombang suara. Fokus utamanya adalah memahami bagaimana karakteristik akustik seperti frekuensi, amplitudo, dan durasi berkaitan dengan cara kita mempersepsi bunyi tersebut.</p>
+                        <p>Fonetik akustik merupakan cabang fonetik yang mempelajari aspek fisik bunyi bahasa sebagai gelombang suara yang merambat melalui media seperti udara. Tujuan utama dari fonetik akustik adalah untuk memahami bagaimana karakteristik akustik bunyi seperti frekuensi, amplitudo, dan durasi berkaitan dengan bagaimana kita mengalami dan mempersepsi bunyi tersebut (Evizariza, 2024).</p>
                     </div>
                     <div>
-                        <h3 class="font-bold text-xl text-gray-800">3. Fonetik Auditoris (Auditory Phonetics)</h3>
-                        <p>Berfokus pada bagaimana bunyi diterima dan diproses oleh pendengar, mencakup studi tentang bagaimana telinga manusia dan otak menginterpretasikan sinyal-sinyal bunyi.</p>
+                        <h3 class="font-bold text-xl text-gray-800">3. Fonetik Auditoris</h3>
+                        <p>Fonetik auditoris berfokus pada bagaimana bunyi diterima dan diproses oleh pendengar (Evizariza, 2024). Ini mencakup studi tentang bagaimana telinga manusia dapat membedakan berbagai bunyi dan bagaimana otak menginterpretasikan sinyal-sinyal bunyi tersebut. Aspek tersebut sangat penting dalam memahami persepsi bahasa, terutama ketika mendengarkan dan berbicara. Misalnya, kemampuan untuk membedakan antara bunyi [s] dan [ʃ] sangat bergantung pada bagaimana telinga manusia mengenali perbedaan frekuensi dan pola gelombang suara yang dihasilkan.</p>
                     </div>
                 </div>
             </div>
@@ -304,40 +310,97 @@
                 </div>
                 
                 <div class="space-y-8">
-                    {{-- Kartu Anggota Tim --}}
-                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                        <h3 class="text-xl font-bold text-gray-900">Eva Rosdiana, S.Pd.</h3>
-                        <p class="mt-1 text-gray-600">Mahasiswa Pascasarjana Program Studi Pendidikan Bahasa Indonesia di Universitas Tanjungpura</p>
+                     {{-- Kartu Anggota Tim --}}
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 flex flex-col sm:flex-row items-center sm:items-start gap-6">
+                        <div class="flex-shrink-0">
+                            {{-- Ganti 'eva.jpg' dengan nama file gambar yang sesuai --}}
+                            {{-- Pastikan gambar memiliki rasio aspek yang sama (misal: 1:1) agar terlihat rapi --}}
+                            <img src="{{ asset('images/team/eva.jpg') }}" alt="Foto Eva Rosdiana" class="w-24 h-24 rounded-full object-cover shadow-md border-2 border-orange-300">
+                        </div>
+                        <div class="text-center sm:text-left flex-1"> {{-- text-center untuk mobile, sm:text-left untuk desktop --}}
+                            <h3 class="text-xl font-bold text-gray-900">Eva Rosdiana, S.Pd.</h3>
+                            <p class="mt-1 text-gray-600">Mahasiswa Pascasarjana Program Studi Pendidikan Bahasa Indonesia di Universitas Tanjungpura</p>
+                        </div>
                     </div>
 
-                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                        <h3 class="text-xl font-bold text-gray-900">Prof. Dr. H. Ahadi Sulissusiawan, M.Pd.</h3>
-                        <p class="mt-1 text-gray-600">Dosen Ilmu Sastra Program Studi Pendidikan Bahasa Indonesia di Universitas Tanjungpura</p>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 flex flex-col sm:flex-row items-center sm:items-start gap-6">
+                        <div class="flex-shrink-0">
+                            <img src="{{ asset('images/team/ahadi.jpg') }}" alt="Foto Prof. Dr. H. Ahadi Sulissusiawan" class="w-24 h-24 rounded-full object-cover shadow-md border-2 border-orange-300">
+                        </div>
+                        <div class="text-center sm:text-left flex-1">
+                            <h3 class="text-xl font-bold text-gray-900">Prof. Dr. H. Ahadi Sulissusiawan, M.Pd.</h3>
+                            <p class="mt-1 text-gray-600">Dosen Ilmu Sastra Program Studi Pendidikan Bahasa Indonesia di Universitas Tanjungpura</p>
+                        </div>
                     </div>
 
-                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                        <h3 class="text-xl font-bold text-gray-900">Dr. Henny Sanulita, M.Pd.</h3>
-                        <p class="mt-1 text-gray-600">Dosen Ilmu Pembelajaran Program Studi Pendidikan Bahasa Indonesia di Universitas Tanjungpura</p>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 flex flex-col sm:flex-row items-center sm:items-start gap-6">
+                        <div class="flex-shrink-0">
+                            <img src="{{ asset('images/team/henny.jpg') }}" alt="Foto Dr. Henny Sanulita" class="w-24 h-24 rounded-full object-cover shadow-md border-2 border-orange-300">
+                        </div>
+                        <div class="text-center sm:text-left flex-1">
+                            <h3 class="text-xl font-bold text-gray-900">Dr. Henny Sanulita, M.Pd.</h3>
+                            <p class="mt-1 text-gray-600">Dosen Ilmu Pembelajaran Program Studi Pendidikan Bahasa Indonesia di Universitas Tanjungpura</p>
+                        </div>
                     </div>
 
-                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                        <h3 class="text-xl font-bold text-gray-900">Hotma Simanjuntak, M.Hum, Ph.D.</h3>
-                        <p class="mt-1 text-gray-600">Dosen Ilmu Linguistik Program Studi Pendidikan Bahasa Indonesia di Universitas Tanjungpura</p>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 flex flex-col sm:flex-row items-center sm:items-start gap-6">
+                        <div class="flex-shrink-0">
+                            <img src="{{ asset('images/team/hotma.jpg') }}" alt="Foto Hotma Simanjuntak" class="w-24 h-24 rounded-full object-cover shadow-md border-2 border-orange-300">
+                        </div>
+                        <div class="text-center sm:text-left flex-1">
+                            <h3 class="text-xl font-bold text-gray-900">Hotma Simanjuntak, M.Hum, Ph.D.</h3>
+                            <p class="mt-1 text-gray-600">Dosen Ilmu Linguistik Program Studi Pendidikan Bahasa Indonesia di Universitas Tanjungpura</p>
+                        </div>
                     </div>
 
-                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                        <h3 class="text-xl font-bold text-gray-900">Dr. Patriantoro, M.Hum.</h3>
-                        <p class="mt-1 text-gray-600">Dosen Ilmu Linguistik Program Studi Pendidikan Bahasa Indonesia di Universitas Tanjungpura</p>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 flex flex-col sm:flex-row items-center sm:items-start gap-6">
+                        <div class="flex-shrink-0">
+                            <img src="{{ asset('images/team/patriantoro.jpg') }}" alt="Foto Dr. Patriantoro" class="w-24 h-24 rounded-full object-cover shadow-md border-2 border-orange-300">
+                        </div>
+                        <div class="text-center sm:text-left flex-1">
+                            <h3 class="text-xl font-bold text-gray-900">Dr. Patriantoro, M.Hum.</h3>
+                            <p class="mt-1 text-gray-600">Dosen Ilmu Linguistik Program Studi Pendidikan Bahasa Indonesia di Universitas Tanjungpura</p>
+                        </div>
                     </div>
 
-                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                        <h3 class="text-xl font-bold text-gray-900">Khairullah, M.Pd.</h3>
-                        <p class="mt-1 text-gray-600">Dosen Program Studi Pendidikan Bahasa Indonesia di Universitas Tanjungpura</p>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 flex flex-col sm:flex-row items-center sm:items-start gap-6">
+                        <div class="flex-shrink-0">
+                            <img src="{{ asset('images/team/khairullah.jpg') }}" alt="Foto Khairullah" class="w-24 h-24 rounded-full object-cover shadow-md border-2 border-orange-300">
+                        </div>
+                        <div class="text-center sm:text-left flex-1">
+                            <h3 class="text-xl font-bold text-gray-900">Khairullah, M.Pd.</h3>
+                            <p class="mt-1 text-gray-600">Dosen Program Studi Pendidikan Bahasa Indonesia di Universitas Tanjungpura</p>
+                        </div>
                     </div>
 
-                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                        <h3 class="text-xl font-bold text-gray-900">Raden Adang Edithya Astama</h3>
-                        <p class="mt-1 text-gray-600">Pengembang Situs</p>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 flex flex-col sm:flex-row items-center sm:items-start gap-6">
+                        <div class="flex-shrink-0">
+                            <img src="{{ asset('images/team/sebastianus.jpg') }}" alt="Foto Sabastianus Hugo" class="w-24 h-24 rounded-full object-cover shadow-md border-2 border-orange-300">
+                        </div>
+                        <div class="text-center sm:text-left flex-1">
+                            <h3 class="text-xl font-bold text-gray-900">Sabastianus Hugo, S.Pd.</h3>
+                            <p class="mt-1 text-gray-600">Terbaik 1 Duta Bahasa Provinsi Kalimantan Barat 2025 (Penutur Bahasa Ahe, Subsuku Dayak Kanayatn, Kecamatan Toho, Kabupaten Mempawah, Kalimantan Barat)</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 flex flex-col sm:flex-row items-center sm:items-start gap-6">
+                        <div class="flex-shrink-0">
+                            <img src="{{ asset('images/team/vila.jpg') }}" alt="Foto Vila Delviya" class="w-24 h-24 rounded-full object-cover shadow-md border-2 border-orange-300">
+                        </div>
+                        <div class="text-center sm:text-left flex-1">
+                            <h3 class="text-xl font-bold text-gray-900">Vila Delviya, S.Pd.</h3>
+                            <p class="mt-1 text-gray-600">Terbaik 3 Duta Bahasa Provinsi Kalimantan Barat 2025 (Penutur Bahasa Indonesia)</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 flex flex-col sm:flex-row items-center sm:items-start gap-6">
+                        <div class="flex-shrink-0">
+                            <img src="{{ asset('images/team/adang.jpg') }}" alt="Foto Raden Adang Edithya Astama" class="w-24 h-24 rounded-full object-cover shadow-md border-2 border-orange-300">
+                        </div>
+                        <div class="text-center sm:text-left flex-1">
+                            <h3 class="text-xl font-bold text-gray-900">Raden Adang Edithya Astama</h3>
+                            <p class="mt-1 text-gray-600">Pengembang Situs</p>
+                        </div>
                     </div>
                 </div>
             </div>

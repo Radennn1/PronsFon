@@ -12,7 +12,8 @@ class TugasPageController extends Controller
      */
     public function index()
     {
-        $tugas = Tugas::all();
+        $tugas = Tugas::orderBy('urutan', 'asc')->get();
+
         return view('pages.tugas.index', ['tugas' => $tugas]);
     }
 

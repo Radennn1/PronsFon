@@ -10,7 +10,7 @@ class SimbolFonetikPageController extends Controller
     public function index()
     {
         // Ambil data dari database, urutkan berdasarkan simbol, dan gunakan pagination
-        $simbols = SimbolFonetik::orderBy('simbol_ipa', 'asc')->paginate(9);
+        $simbols = SimbolFonetik::orderBy('simbol_ipa', 'asc')->get();
 
         return view('pages.simbol.index', [
             'simbols' => $simbols

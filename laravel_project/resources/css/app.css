@@ -58,3 +58,40 @@
   opacity: 0.5;
   pointer-events: none;
 }
+
+ .ipa-button {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.85);
+        color: #1f2937; /* abu tua agar kontras */
+        font-weight: bold;
+        font-size: 1rem;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .ipa-button:hover {
+        background-color: #f97316; /* warna oranye */
+        color: white;
+        transform: scale(1.1);
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Garis miring untuk layout seperti di gambar asli */
+    .relative.bg-white::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 25%; /* Kolom kedua (Front) */
+        width: 0;
+        height: 0;
+        border-left: 1px solid rgba(209, 213, 219, 0.7); /* border-gray-300 */
+        border-top: 1px solid rgba(209, 213, 219, 0.7); /* border-gray-300 */
+        transform: skewY(15deg) translateY(-20px); /* Sesuaikan sudut kemiringan */
+        /* Ini hanya contoh, membutuhkan penyesuaian detail untuk meniru chart asli */
+    }

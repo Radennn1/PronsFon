@@ -99,30 +99,46 @@
                 });
             }
 
-            /* ===============================
-               5. Pemutar Audio (Simbol Fonetik)
-            =============================== */
-            const audioPlayer = document.getElementById('audio-player');
-            const playButtons = document.querySelectorAll('.play-audio-btn');
+        /* ===============================
+           Pemutar Audio (Simbol Fonetik - Chart Interaktif)
+        =============================== */
+        const buttons = document.querySelectorAll('.ipa-button');
+        const player = document.getElementById('audio-player');
 
-            if (audioPlayer) {
-                playButtons.forEach(button => {
-                    button.addEventListener('click', async () => {
-                        const audioSrc = button.dataset.audioSrc;
-                        if (!audioSrc) return console.error('Tombol tidak memiliki sumber audio.');
+        buttons.forEach(button => {
+            button.addEventListener('click', async () => {
+                const symbol = button.textContent.trim();
+                const basePath = `/storage/audio/fonetik/${symbol}`;
+                
+                // Coba versi .ogg dulu
+                let audioPath = `${basePath}.ogg`;
+                let canPlay = player.canPlayType('audio/ogg');
 
-                        try {
-                            if (!audioPlayer.paused) audioPlayer.pause();
-                            audioPlayer.src = audioSrc + '?v=' + Date.now(); // cegah cache
-                            await audioPlayer.load();
-                            await audioPlayer.play();
-                        } catch (err) {
-                            console.error('Gagal memutar audio:', err);
-                        }
-                    });
-                });
-            }
+                // Jika tidak bisa, fallback ke .mp3
+                if (!canPlay) {
+                    audioPath = `${basePath}.mp3`;
+                }
 
+                // Cek apakah file audio ada
+                try {
+                    const response = await fetch(audioPath, { method: 'HEAD' });
+                    if (!response.ok) throw new Error('File audio tidak ditemukan');
+                } catch {
+                    console.warn(`Audio untuk simbol "${symbol}" tidak ditemukan: ${audioPath}`);
+                    return;
+                }
+
+                // Setel audio dan mainkan
+                player.src = audioPath;
+                player.play().catch(err => console.error('Gagal memutar:', err));
+
+                // Efek visual klik
+                button.classList.add('ring-4', 'ring-orange-400', 'scale-110', 'transition', 'duration-300');
+                setTimeout(() => {
+                    button.classList.remove('ring-4', 'ring-orange-400', 'scale-110');
+                }, 300);
+            });
+        });
             /* ===============================
                6. Navigasi Mobile Menu
             =============================== */
@@ -141,7 +157,7 @@
                 });
             }
 
-            const semuaUlasanModal = document.getElementById('semua-ulasan-modal');
+        const semuaUlasanModal = document.getElementById('semua-ulasan-modal');
         const semuaModalContent = document.getElementById('semua-modal-content');
         const openSemuaBtn = document.getElementById('open-semua-ulasan-modal');
         const closeSemuaBtn = document.getElementById('close-semua-ulasan-modal');
@@ -169,6 +185,29 @@
                 }
             });
         }
+
+        document.querySelectorAll('.abstract-container').forEach(container => {
+            const fullAbstract = container.querySelector('.full-abstract');
+            const shortAbstract = container.querySelector('.short-abstract');
+            const toggleButton = container.querySelector('.read-more-toggle');
+            // const maxLength = parseInt(container.dataset.maxLength); // Jika ingin ambil dari data-attribute
+
+            if (toggleButton) {
+                toggleButton.addEventListener('click', function () {
+                    const isMinimized = shortAbstract.classList.contains('hidden');
+
+                    if (isMinimized) {
+                        shortAbstract.classList.remove('hidden');
+                        fullAbstract.classList.add('hidden');
+                        toggleButton.textContent = 'Baca Selengkapnya';
+                    } else {
+                        shortAbstract.classList.add('hidden');
+                        fullAbstract.classList.remove('hidden');
+                        toggleButton.textContent = 'Sembunyikan';
+                    }
+                });
+            }
+        });
     });
     </script>
 </body>
